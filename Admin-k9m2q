@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rhea Cambridge-Parker - Admin CV</title>
+<title>Rhea Cambridge-Parker - Administrator</title>
 <style>
   body {
     font-family: 'Poppins', sans-serif;
@@ -45,8 +45,8 @@
 <body>
 
 <h1>Rhea Cambridge-Parker - Admin</h1>
-<a class="download" href="RheaCP_AM_CV.pdf" download>⬇️ Download CV</a>
-<iframe src="RheaCP_AM_CV.pdf"></iframe>
+<a class="download" href="RheaCP_Admin_CV.pdf" download>⬇️ Download CV</a>
+<iframe src="RheaCP_Admin_CV.pdf"></iframe>
 
 </body>
 </html>
