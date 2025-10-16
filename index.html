@@ -5,95 +5,201 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Name - CV</title>
   <style>
+    :root {
+      --primary: #007acc;
+      --primary-dark: #005a99;
+      --text: #222;
+      --bg-gradient: linear-gradient(135deg, #f0f4f8, #d9e6f2);
+      --card-bg: #fff;
+      --border: #ccc;
+    }
+
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      margin: 40px auto;
-      max-width: 800px;
-      color: #333;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-gradient);
+      color: var(--text);
       line-height: 1.6;
     }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 30px;
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
     header {
       text-align: center;
-      border-bottom: 2px solid #444;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
+      background: var(--primary);
+      color: #fff;
+      padding: 30px 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
     }
+
     h1 {
       margin: 0;
-      font-size: 2em;
+      font-size: 2.2rem;
+      letter-spacing: 0.5px;
     }
-    h2 {
-      color: #444;
-      margin-top: 30px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 0.95rem;
     }
+
+    header a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
     a.button {
       display: inline-block;
       padding: 10px 20px;
-      background-color: #007acc;
-      color: #fff;
+      background-color: #fff;
+      color: var(--primary);
+      border-radius: 6px;
+      margin-top: 15px;
+      font-weight: 600;
       text-decoration: none;
-      border-radius: 5px;
-      margin-top: 10px;
+      transition: all 0.3s;
     }
+
     a.button:hover {
-      background-color: #005a99;
+      background-color: var(--primary-dark);
+      color: #fff;
     }
+
+    section {
+      margin-bottom: 30px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-top: 0;
+      font-size: 1.3rem;
+      border-left: 5px solid var(--primary);
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    p, li {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
     iframe {
-      margin-top: 30px;
+      margin-top: 20px;
       width: 100%;
-      height: 800px;
-      border: 1px solid #ccc;
+      height: 900px;
+      border: 2px solid var(--border);
+      border-radius: 8px;
     }
+
+    .mobile-pdf {
+      text-align: center;
+      margin-top: 25px;
+    }
+
     footer {
       text-align: center;
       font-size: 0.9em;
-      margin-top: 40px;
       color: #666;
+      margin-top: 40px;
+    }
+
+    /* ✅ Responsive styles */
+    @media (max-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      header {
+        padding: 20px 15px;
+      }
+
+      iframe {
+        display: none;
+      }
+
+      .mobile-pdf {
+        display: block;
+      }
+
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .mobile-pdf {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>📍 Location | 📞 +00 000 0000 | ✉️ <a href="mailto:your@email.com">your@email.com</a> | <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
-    <a href="YourName_CV.pdf" class="button" download>⬇️ Download My CV (PDF)</a>
-  </header>
+  <div class="container">
+    <header>
+      <h1>Your Name</h1>
+      <p>📍 City, Country | 📞 +00 000 0000 | ✉️ <a href="mailto:your@email.com">your@email.com</a> | <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
+      <a href="YourName_CV.pdf" class="button" download>⬇️ Download My CV (PDF)</a>
+    </header>
 
-  <section>
-    <h2>Profile</h2>
-    <p>A short professional summary goes here — describe your experience, key strengths, and career goals in 2–4 sentences.</p>
-  </section>
+    <section>
+      <h2>Profile</h2>
+      <p>A short professional summary goes here — describe your experience, key strengths, and career goals in 2–4 sentences.</p>
+    </section>
 
-  <section>
-    <h2>Experience</h2>
-    <p><strong>Job Title — Company Name</strong> (Year–Year)<br>
-    Brief description of your responsibilities, key achievements, and technologies or tools used.</p>
+    <section>
+      <h2>Experience</h2>
+      <p><strong>Job Title — Company Name</strong> (Year–Year)<br>
+      Brief description of your responsibilities, key achievements, and technologies or tools used.</p>
 
-    <p><strong>Previous Job — Company</strong> (Year–Year)<br>
-    Another summary of work done and accomplishments.</p>
-  </section>
+      <p><strong>Previous Job — Company</strong> (Year–Year)<br>
+      Another summary of work done and accomplishments.</p>
+    </section>
 
-  <section>
-    <h2>Education</h2>
-    <p><strong>Degree / Course</strong> — University / Institution (Year–Year)</p>
-  </section>
+    <section>
+      <h2>Education</h2>
+      <p><strong>Degree / Course</strong> — University / Institution (Year–Year)</p>
+    </section>
 
-  <section>
-    <h2>Skills</h2>
-    <ul>
-      <li>Skill 1</li>
-      <li>Skill 2</li>
-      <li>Skill 3</li>
-      <li>Skill 4</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>Skill 1</li>
+        <li>Skill 2</li>
+        <li>Skill 3</li>
+        <li>Skill 4</li>
+      </ul>
+    </section>
 
-  <iframe src="YourName_CV.pdf"></iframe>
+    <iframe src="YourName_CV.pdf"></iframe>
 
-  <footer>
-    <p>© 2025 Your Name — All rights reserved.</p>
-  </footer>
+    <div class="mobile-pdf">
+      <a href="YourName_CV.pdf" class="button" target="_blank">📄 View CV PDF</a>
+    </div>
+
+    <footer>
+      <p>© 2025 Your Name — All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
