@@ -85,6 +85,35 @@
       color: var(--primary-dark);
     }
 
+    /* ---------- LinkedIn Icon ---------- */
+    .social-links {
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #a3f7bf;
+      font-weight: 500;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .social-links a:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
+    }
+
+    .social-links svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
     /* ---------- Embedded PDF ---------- */
     .pdf-container {
       margin-top: 20px;
@@ -126,6 +155,17 @@
       <h1>Your Name</h1>
       <p>📍 Your Location | 📞 +00 000 0000 | ✉️ your@email.com</p>
       <a href="your-cv.pdf" class="btn" download>⬇ Download My CV (PDF)</a>
+
+      <div class="social-links">
+        <!-- 👇 Replace with your real LinkedIn URL -->
+        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">
+          <!-- LinkedIn SVG icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M4.98 3.5C4.98 5 3.9 6 2.4 6S0 5 0 3.5 1.1 1 2.6 1s2.38 1 2.38 2.5zM0 8h4.8v16H0V8zm7.8 0h4.6v2.2h.1c.6-1.2 2.2-2.4 4.5-2.4C21 7.8 24 10.3 24 15.2V24h-4.8v-7.6c0-1.8-.1-4.1-2.6-4.1-2.6 0-3 2-3 4v7.7H8V8z"/>
+          </svg>
+          LinkedIn Profile
+        </a>
+      </div>
     </header>
 
     <section>
@@ -137,7 +177,7 @@
       <h2>Embedded CV Preview</h2>
       <p>You can view my full CV below or download it directly using the button above.</p>
       <div class="pdf-container">
-        <!-- 👇 Replace “your-cv.pdf” with the actual PDF file name -->
+        <!-- 👇 Replace “your-cv.pdf” with your actual file name -->
         <iframe src="your-cv.pdf"></iframe>
       </div>
     </section>
