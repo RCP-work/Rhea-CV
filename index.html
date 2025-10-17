@@ -7,9 +7,9 @@
   <style>
     /* ---------- Color Theme: Slate & Cyan ---------- */
     :root {
-      --primary: #2c3e50;        /* slate background */
-      --primary-dark: #1a252f;   /* darker slate for hover or accents */
-      --accent: #76d7c4;         /* soft cyan */
+      --primary: #2c3e50;
+      --primary-dark: #1a252f;
+      --accent: #76d7c4;
       --link-hover: #ffffff;
       --text: #333;
       --background: #f9f9f9;
@@ -26,7 +26,7 @@
     }
 
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
     }
 
@@ -85,7 +85,21 @@
       color: var(--primary-dark);
     }
 
-    /* ---------- Responsive Design ---------- */
+    /* ---------- Embedded PDF ---------- */
+    .pdf-container {
+      margin-top: 20px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    iframe {
+      width: 100%;
+      height: 800px;
+      border: none;
+    }
+
+    /* ---------- Responsive ---------- */
     @media (max-width: 600px) {
       body {
         padding: 10px;
@@ -97,6 +111,10 @@
 
       header h1 {
         font-size: 1.6em;
+      }
+
+      iframe {
+        height: 500px;
       }
     }
   </style>
@@ -113,6 +131,15 @@
     <section>
       <h2>Profile</h2>
       <p>Motivated professional with a strong background in [your field]. Skilled in [key skills] and passionate about delivering quality results.</p>
+    </section>
+
+    <section>
+      <h2>Embedded CV Preview</h2>
+      <p>You can view my full CV below or download it directly using the button above.</p>
+      <div class="pdf-container">
+        <!-- 👇 Replace “your-cv.pdf” with the actual PDF file name -->
+        <iframe src="your-cv.pdf"></iframe>
+      </div>
     </section>
 
     <section>
